@@ -217,7 +217,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Mar 05 2024 01:57:49 GMT+0800">2024-03-05 01:57:49</span>
+                <span class="datetime" data-updated="Tue Mar 05 2024 02:12:06 GMT+0800">2024-03-05 02:12:06</span>
             </span>
         
 
@@ -303,7 +303,7 @@
 <p>生命周期函数是指vue实例在某一个时间点会自动执行的函数<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-7.png"
+                       data-src="/images/image/image-7.png"
                         alt="Alt text"
                  ><br>图里是vue2的，vue3在命名上多了on和setup<br>2.x 版本生命周期相对应的组合式 API<br>beforeCreate -&gt; 使用 setup()<br>created -&gt; 使用 setup()<br>beforeMount -&gt; onBeforeMount<br>mounted -&gt; onMounted<br>beforeUpdate -&gt; onBeforeUpdate<br>updated -&gt; onUpdated<br>beforeDestroy -&gt; onBeforeUnmount<br>destroyed -&gt; onUnmounted<br>errorCaptured -&gt; onErrorCaptured  </p>
 <p>template<br>插值表达式用两个大括号</p>
@@ -327,12 +327,12 @@
 <p>&lt;table&gt;里面有&lt;tbody&gt;里面有&lt;tr&gt;里面有&lt;td&gt;<br>&lt;tbody&gt;里面不能直接用template，但是可以用is语句来指向template子组件<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-8.png"
+                       data-src="/images/image/image-8.png"
                         alt="Alt text"
                  ><br>ul,ol,select标签同理<br>子组件里data必须是函数，不能是父组件中的对象，因为子组件都拥有独立数据不共享<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-9.png"
+                       data-src="/images/image/image-9.png"
                         alt="Alt text"
                  ></p>
 <p>用ref来操作dom</p>
@@ -341,17 +341,17 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-10.png"
+                       data-src="/images/image/image-10.png"
                         alt="Alt text"
                  ><br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-12.png"
+                       data-src="/images/image/image-12.png"
                         alt="Alt text"
                  ><br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-11.png"
+                       data-src="/images/image/image-11.png"
                         alt="Alt text"
                  ></p>
 <p>父子组件传递<br>父组件向子组件传数据，要在父组件components里先注册，然后标签里传参，子组件用props接收属性数据，且最好不要修改，克隆一个副本修改<br>子组件向父组件传值调用$emit(方法名)，父组件在标签里用@监听方法然后触发事件<br>子组件的</p>
@@ -360,7 +360,7 @@
 <p>传参校验<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-13.png"
+                       data-src="/images/image/image-13.png"
                         alt="Alt text"
                  ><br>非props特性会显示在dom标签里，父组件传子组件不接收<br>绑定原生事件只需要在事件后加上.native<br>非父子组件传值bus 发布订阅模式 观察者模式</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">child</span> <span class="attr">content</span>=<span class="string">&quot;ella&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">child</span> <span class="attr">content</span>=<span class="string">&quot;syray&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"><span class="title class_">Vue</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">bus</span> = <span class="keyword">new</span> <span class="title class_">Vue</span>();</span><br><span class="line">  <span class="title class_">Vue</span>.<span class="title function_">component</span>(<span class="string">&quot;child&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">data</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            <span class="attr">selfContent</span>:<span class="variable language_">this</span>.<span class="property">content</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      <span class="attr">content</span>: <span class="title class_">String</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">template</span>: <span class="string">&quot;&lt;div @click=&#x27;handleClick&#x27;&gt;&#123;&#123;selfContent&#125;&#125;&lt;/div&gt;&quot;</span>,</span><br><span class="line">    <span class="attr">methods</span>:&#123;</span><br><span class="line">        <span class="attr">handleClick</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">bus</span>.$emit(<span class="string">&#x27;change&#x27;</span>,<span class="variable language_">this</span>.<span class="property">selfContent</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">mounted</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">var</span> this_=<span class="variable language_">this</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">bus</span>.$on(<span class="string">&#x27;change&#x27;</span>,<span class="keyword">function</span>(<span class="params">msg</span>)&#123;</span><br><span class="line">            this_.<span class="property">selfContent</span>=msg;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">var</span> vm = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">    <span class="attr">el</span>: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
@@ -371,12 +371,12 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-14.png"
+                       data-src="/images/image/image-14.png"
                         alt="Alt text"
                  ><br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-15.png"
+                       data-src="/images/image/image-15.png"
                         alt="Alt text"
                  ></p>
 <p>动态组件<br>v-once是创建一次就放入内存中，提高性能，不会反复创建</p>
@@ -388,35 +388,35 @@
 <p><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-16.png"
+                       data-src="/images/image/image-16.png"
                         alt="Alt text"
                  ><br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-17.png"
+                       data-src="/images/image/image-17.png"
                         alt="Alt text"
                  ></p>
 <p>动画封装<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-18.png"
+                       data-src="/images/image/image-18.png"
                         alt="Alt text"
                  ><br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-19.png"
+                       data-src="/images/image/image-19.png"
                         alt="Alt text"
                  ><br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-20.png"
+                       data-src="/images/image/image-20.png"
                         alt="Alt text"
                  ></p>
 <h2 id="Vue3"><a href="#Vue3" class="headerlink" title="Vue3"></a>Vue3</h2><ol>
 <li>指令语法<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-21.png"
+                       data-src="/images/image/image-21.png"
                         alt="Alt text"
                  ></li>
 <li>数组<br>变更方法<br>push()<br>pop()<br>shift()<br>unshift()<br>splice()<br>sort()<br>reverse()<br>非变更方法<br>filter(), concat(), slice()<br>reverse()和sort()调用之前创建一个原数组的副本</li>
@@ -441,19 +441,19 @@
 <li>在vue.config.js里定义devServer的代理服务器和api前缀指向<br> <img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-22.png"
+                       data-src="/images/image/image-22.png"
                         alt="Alt text"
                  ></li>
 <li>然后定义utils文件夹里的request.js，在该文件里引入axios，创建axios对象和要访问的URL即前面定义的API前缀，然后定义请求和响应拦截器，最后export定义的request对象<br> <img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-23.png"
+                       data-src="/images/image/image-23.png"
                         alt="Alt text"
                  ></li>
 <li>在apis文件夹里引入定义好的request对象，开始编写具体的request函数，包括后台接口的url，http协议方法，传递的参数<br> <img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-24.png"
+                       data-src="/images/image/image-24.png"
                         alt="Alt text"
                  ></li>
 <li>在vue视图里引入apis里的request函数并调用，注意调用后的返回值<br>这里同样可以直接在vue组件里面使用类似下方结构来调用</li>
@@ -492,7 +492,7 @@
 <li>基本都是围绕setup里面响应式数据声明出的问题<br>ref和reactive<br><img  
                        lazyload
                        alt="image"
-                       data-src="/image/image-25.png.png"
+                       data-src="/images/image/image-25.png.png"
                         alt="alt text"
                  ><br>reactive对象赋值是深拷贝地址会变化，如果不是每个内部属性挨个赋值响应式对象，整体对象就会失去响应性，reactive返回的是对原始对象的引用，使用toRefs来解构<br>toRef是将对象的属性转化为ref对象，浅拷贝，跟原本对象的属性对应地址引用是同一个，可以修改</li>
 <li>vuex和vue-router部分有了更新</li>
@@ -611,22 +611,22 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/03/04/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/"
-                                   title="前端面试知识点汇总"
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/03/04/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                   title="JavaScript学习笔记"
                                 >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">前端面试知识点汇总</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-title-item text-ellipsis">JavaScript学习笔记</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
                                     </span>
                                 </a>
                             </div>
-                        
                         
                     </div>
                 
