@@ -217,7 +217,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Mar 05 2024 19:09:22 GMT+0800">2024-03-05 19:09:22</span>
+                <span class="datetime" data-updated="Tue Mar 05 2024 21:16:37 GMT+0800">2024-03-05 21:16:37</span>
             </span>
         
 
@@ -358,8 +358,10 @@
 <ul>
 <li>对称加密：加密和解密使用的秘钥是同一个，秘钥发送的过程中容易被窃取</li>
 <li>非对称加密：有公钥和私钥，公钥加密后只能用私钥解密，私钥加密后也只能用公钥解密  </li>
-<li>混合加密：<br>摘要算法：验证信息的完整性<br>数字签名：身份验证</li>
+<li>混合加密：<br>发送者用会话密钥加密消息（对称），用公钥加密的会话密钥（非对称），两个一起发送<br>消息接收者用自己的私钥解密出会话密钥，用会话密钥解密消息</li>
 </ul>
+<p>摘要算法：验证信息的完整性  散列函数、哈希函数</p>
+<p>数字签名：身份验证</p>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><img  
                        lazyload
                        alt="image"
@@ -629,7 +631,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">8.2k</span>
+                    <span class="item-value border-box word">8.3k</span>
                 </span>
             
 
@@ -869,5 +871,5 @@
         
     
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":180,"height":300,"hOffset":50,"vOffset":0},"mobile":{"show":true},"log":false});</script></body>
 </html>
