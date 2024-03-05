@@ -1,0 +1,8 @@
+/* your-hexo/source/css/custom.css */
+
+:root {
+    --header-title-font-family: STKaiti;
+    --header-title-font-size: 2.2rem;
+    --first-screen-font-family: STSong;
+    --first-screen-font-size: 3.0rem
+}

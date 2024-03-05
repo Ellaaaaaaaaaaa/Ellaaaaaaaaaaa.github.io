@@ -116,7 +116,7 @@ function startSakura() {
   canvas.width = window.innerWidth;
   canvas.setAttribute(
     "style",
-    "position: fixed;left: 0;top: 0;pointer-events: none;"
+    "position: fixed;left: 0;top: 0;pointer-events: none;opacity: 0.4;"
   );
   canvas.setAttribute("id", "canvas_sakura");
   document.getElementsByTagName("body")[0].appendChild(canvas);
