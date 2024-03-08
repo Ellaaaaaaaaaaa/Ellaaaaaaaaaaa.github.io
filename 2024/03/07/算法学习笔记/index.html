@@ -216,7 +216,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Mar 08 2024 01:42:19 GMT+0800">2024-03-08 01:42:19</span>
+                <span class="datetime" data-updated="Fri Mar 08 2024 15:33:20 GMT+0800">2024-03-08 15:33:20</span>
             </span>
         
 
@@ -249,7 +249,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.7k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.9k 字</span>
             </span>
         
         
@@ -275,7 +275,33 @@
 <p>力扣目前是先把LeetCode75刷完，进行算法扫盲  </p>
 <p>唉，没想到上一次刷力扣都是一年前了，这一次争取刷题量大一点，坚持的久一点  </p>
 <p>本笔记记录中等及以上难度的题和一些特殊思想</p>
-<h3 id="算法，启动！"><a href="#算法，启动！" class="headerlink" title="算法，启动！"></a><font color="#483D8B">算法，启动！</font></h3><h3 id="334-递增的三元子序列"><a href="#334-递增的三元子序列" class="headerlink" title="334.递增的三元子序列"></a>334.递增的三元子序列</h3><p><strong>题目：</strong><br>给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。<br>如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ，使得 nums[i] &lt; nums[j] &lt; nums[k] ，返回 true ；否则，返回 false 。</p>
+<p><font color="#483D8B" face="STCAIYUN" size=5>算法，启动！</font></p>
+<h3 id="题库LeetCode75"><a href="#题库LeetCode75" class="headerlink" title="题库LeetCode75"></a><font color="#483D8B">题库LeetCode75</font></h3><p>设计到的知识点一览</p>
+<ul>
+<li><input disabled="" type="checkbox"> 数组 &#x2F; 字符串</li>
+<li><input disabled="" type="checkbox"> 双指针</li>
+<li><input disabled="" type="checkbox"> 滑动窗口</li>
+<li><input disabled="" type="checkbox"> 前缀和</li>
+<li><input disabled="" type="checkbox"> 哈希表 &#x2F; 哈希集合</li>
+<li><input disabled="" type="checkbox"> 栈</li>
+<li><input disabled="" type="checkbox"> 队列</li>
+<li><input disabled="" type="checkbox"> 链表</li>
+<li><input disabled="" type="checkbox"> 二叉树 - 深度优先搜索</li>
+<li><input disabled="" type="checkbox"> 二叉树 - 广度优先搜索</li>
+<li><input disabled="" type="checkbox"> 二叉搜索树</li>
+<li><input disabled="" type="checkbox"> 图 - 深度优先搜索</li>
+<li><input disabled="" type="checkbox"> 图 - 广度优先搜索</li>
+<li><input disabled="" type="checkbox"> 堆 &#x2F; 优先队列</li>
+<li><input disabled="" type="checkbox"> 二分查找</li>
+<li><input disabled="" type="checkbox"> 回溯</li>
+<li><input disabled="" type="checkbox"> 动态规划 - 一维</li>
+<li><input disabled="" type="checkbox"> 动态规划 - 多维</li>
+<li><input disabled="" type="checkbox"> 位运算</li>
+<li><input disabled="" type="checkbox"> 前缀树</li>
+<li><input disabled="" type="checkbox"> 区间集合</li>
+<li><input disabled="" type="checkbox"> 单调栈</li>
+</ul>
+<h4 id="334-递增的三元子序列"><a href="#334-递增的三元子序列" class="headerlink" title="334.递增的三元子序列"></a>334.递增的三元子序列</h4><p><strong>题目：</strong><br>给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。<br>如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ，使得 nums[i] &lt; nums[j] &lt; nums[k] ，返回 true ；否则，返回 false 。</p>
 <hr>
 <p><strong>解析：</strong></p>
 <ol>
@@ -290,7 +316,7 @@
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> increasingTriplet = <span class="keyword">function</span> (<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> len = nums.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">if</span> (len &lt; <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> first = nums[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">let</span> second = <span class="title class_">Number</span>.<span class="property">MAX_VALUE</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">const</span> num = nums[i]</span><br><span class="line">        <span class="keyword">if</span> (num &gt; second) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (num &gt; first) &#123;</span><br><span class="line">            second = num</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            first = num</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h3 id="215-数组中的第K个最大元素"><a href="#215-数组中的第K个最大元素" class="headerlink" title="215.数组中的第K个最大元素"></a>215.数组中的第K个最大元素</h3><p><strong>题目：</strong><br>给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。<br>请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。<br>你必须设计并实现时间复杂度为 O(n) 的算法解决此问题。</p>
+<h4 id="215-数组中的第K个最大元素"><a href="#215-数组中的第K个最大元素" class="headerlink" title="215.数组中的第K个最大元素"></a>215.数组中的第K个最大元素</h4><p><strong>题目：</strong><br>给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。<br>请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。<br>你必须设计并实现时间复杂度为 O(n) 的算法解决此问题。</p>
 <hr>
 <p><strong>解析：</strong></p>
 <ol>
@@ -310,7 +336,7 @@
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">k</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> findKthLargest = <span class="keyword">function</span> (<span class="params">nums, k</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> heapSize = nums.<span class="property">length</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">buildMaxHeap</span>(<span class="params">nums, heapSize</span>) &#123;</span><br><span class="line">        <span class="comment">//这里的i是最后一个非叶子节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="title class_">Math</span>.<span class="title function_">floor</span>(heapSize / <span class="number">2</span>) - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="title function_">maxHeapify</span>(nums, i, heapSize)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 从左向右，自上而下的冒泡</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">maxHeapify</span>(<span class="params">nums, i, heapSize</span>) &#123;</span><br><span class="line">        <span class="comment">//左子节点</span></span><br><span class="line">        <span class="keyword">let</span> l = i * <span class="number">2</span> + <span class="number">1</span></span><br><span class="line">        <span class="comment">//右子节点</span></span><br><span class="line">        <span class="keyword">let</span> r = i * <span class="number">2</span> + <span class="number">2</span></span><br><span class="line">        <span class="keyword">let</span> largest = i</span><br><span class="line">        <span class="keyword">if</span> (l &lt; heapSize &amp;&amp; nums[l] &gt; nums[largest]) &#123;</span><br><span class="line">            largest = l</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (r &lt; heapSize &amp;&amp; nums[r] &gt; nums[largest]) &#123;</span><br><span class="line">            largest = r</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (largest !== i) &#123;</span><br><span class="line">            <span class="title function_">swap</span>(nums, i, largest) <span class="comment">// 进行节点调整</span></span><br><span class="line">            <span class="comment">// 继续调整下面的非叶子节点，直到叶子节点</span></span><br><span class="line">            <span class="title function_">maxHeapify</span>(nums, largest, heapSize)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">swap</span>(<span class="params">a, i, j</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = a[i];</span><br><span class="line">        a[i] = a[j];</span><br><span class="line">        a[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">buildMaxHeap</span>(nums, heapSize) <span class="comment">// 构建好了一个最大堆</span></span><br><span class="line">    <span class="comment">// 最大堆是最大元素和最后一个元素交换，再删去最后一个元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = nums.<span class="property">length</span> - <span class="number">1</span>; i &gt;= nums.<span class="property">length</span> - k + <span class="number">1</span>; i--) &#123;</span><br><span class="line">        <span class="title function_">swap</span>(nums, <span class="number">0</span>, i)</span><br><span class="line">        --heapSize</span><br><span class="line">        <span class="comment">// 重新调整最大堆</span></span><br><span class="line">        <span class="title function_">maxHeapify</span>(nums, <span class="number">0</span>, heapSize);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nums[<span class="number">0</span>]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="72-编辑距离"><a href="#72-编辑距离" class="headerlink" title="72.编辑距离"></a>72.编辑距离</h3><p><strong>题目：</strong><br>给你两个单词 word1 和 word2， 请返回将 word1 转换成 word2 所使用的最少操作数。<br>你可以对单词字符进行单个插入&#x2F;删除&#x2F;替换操作</p>
+<h4 id="72-编辑距离"><a href="#72-编辑距离" class="headerlink" title="72.编辑距离"></a>72.编辑距离</h4><p><strong>题目：</strong><br>给你两个单词 word1 和 word2， 请返回将 word1 转换成 word2 所使用的最少操作数。<br>你可以对单词字符进行单个插入&#x2F;删除&#x2F;替换操作</p>
 <hr>
 <p><strong>解析：</strong><br>这个题目我一看不就是虚拟DOM的diff算法吗，指路<a class="link"   target="_blank" rel="noopener" href="https://vue3js.cn/interview/vue/diff.html" >https://vue3js.cn/interview/vue/diff.html<i class="fas fa-external-link-alt"></i></a>，这个题目就是一个简化版<br>先放着，等我学一下动态规划再回头来解这个题</p>
 
@@ -543,7 +569,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%EF%BC%8C%E5%90%AF%E5%8A%A8%EF%BC%81"><span class="nav-text">算法，启动！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%BA%93LeetCode75"><span class="nav-text">题库LeetCode75</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -583,7 +609,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">11.3k</span>
+                    <span class="item-value border-box word">12.3k</span>
                 </span>
             
 
@@ -725,7 +751,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%EF%BC%8C%E5%90%AF%E5%8A%A8%EF%BC%81"><span class="nav-text">算法，启动！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%BA%93LeetCode75"><span class="nav-text">题库LeetCode75</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
