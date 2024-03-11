@@ -216,7 +216,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Mar 11 2024 16:48:43 GMT+0800">2024-03-11 16:48:43</span>
+                <span class="datetime" data-updated="Tue Mar 12 2024 00:31:18 GMT+0800">2024-03-12 00:31:18</span>
             </span>
         
 
@@ -249,12 +249,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.1k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.9k 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>13 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>16 分钟</span>
             </span>
         
         
@@ -277,12 +277,12 @@
 <p><font color="#483D8B" face="STCAIYUN" size=5>算法，启动！</font></p>
 <h3 id="题库LeetCode75"><a href="#题库LeetCode75" class="headerlink" title="题库LeetCode75"></a><font color="#483D8B">题库LeetCode75</font></h3><p>本题库涉及到的知识点一览</p>
 <ul>
-<li><input disabled="" type="checkbox"> 数组 &#x2F; 字符串</li>
+<li><input disabled="" type="checkbox"> 数组 &#x2F; 字符串 334</li>
 <li><input disabled="" type="checkbox"> 双指针</li>
 <li><input disabled="" type="checkbox"> 滑动窗口</li>
 <li><input disabled="" type="checkbox"> 前缀和</li>
 <li><input disabled="" type="checkbox"> 哈希表 &#x2F; 哈希集合</li>
-<li><input disabled="" type="checkbox"> 栈</li>
+<li><input disabled="" type="checkbox"> 栈 735</li>
 <li><input disabled="" type="checkbox"> 队列</li>
 <li><input disabled="" type="checkbox"> 链表</li>
 <li><input disabled="" type="checkbox"> 二叉树 - 深度优先搜索</li>
@@ -290,15 +290,15 @@
 <li><input disabled="" type="checkbox"> 二叉搜索树</li>
 <li><input disabled="" type="checkbox"> 图 - 深度优先搜索</li>
 <li><input disabled="" type="checkbox"> 图 - 广度优先搜索</li>
-<li><input disabled="" type="checkbox"> 堆 &#x2F; 优先队列</li>
+<li><input disabled="" type="checkbox"> 堆 &#x2F; 优先队列 215</li>
 <li><input disabled="" type="checkbox"> 二分查找</li>
 <li><input disabled="" type="checkbox"> 回溯</li>
-<li><input disabled="" type="checkbox"> 动态规划 - 一维</li>
-<li><input disabled="" type="checkbox"> 动态规划 - 多维</li>
+<li><input disabled="" type="checkbox"> 动态规划 - 一维 1137</li>
+<li><input disabled="" type="checkbox"> 动态规划 - 多维 72</li>
 <li><input disabled="" type="checkbox"> 位运算</li>
 <li><input disabled="" type="checkbox"> 前缀树</li>
 <li><input disabled="" type="checkbox"> 区间集合</li>
-<li><input disabled="" type="checkbox"> 单调栈</li>
+<li><input checked="" disabled="" type="checkbox"> 单调栈 739 901</li>
 </ul>
 <h4 id="334-递增的三元子序列"><a href="#334-递增的三元子序列" class="headerlink" title="334.递增的三元子序列"></a>334.递增的三元子序列</h4><p><strong>题目：</strong></p>
 <p>给你一个整数数组 nums ，判断这个数组中是否存在长度为 3 的递增子序列。<br>如果存在这样的三元组下标 (i, j, k) 且满足 i &lt; j &lt; k ，使得 nums[i] &lt; nums[j] &lt; nums[k] ，返回 true ；否则，返回 false 。</p>
@@ -386,6 +386,23 @@
 <p>单调递减栈步骤如下：维护一个数组下标的单调栈，正向遍历数组，当栈为空的时候直接当前下标入栈；不为空的时候比较栈顶元素对应的数组数值temperatures[stack[stack.length-1]]和当前遍历数组数值temperatures[i]，temperatures[i]&gt;temperatures[stack[stack.length-1]]的话，栈顶元素pop出来，该元素对应的距离为i-stack[stack.length-1]，然后循环直至栈为空或者不满足大于的条件，最后i进栈</p>
 <p>pop的时候更新距离是因为遍历数组是按正序遍历的，那么满足大小条件的一定是右边第一个</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">temperatures</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> dailyTemperatures = <span class="keyword">function</span>(<span class="params">temperatures</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> len=temperatures.<span class="property">length</span></span><br><span class="line">    <span class="keyword">let</span> ans=<span class="keyword">new</span> <span class="title class_">Array</span>(len).<span class="title function_">fill</span>(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">let</span> stack=[]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(stack.<span class="property">length</span>&amp;&amp;temperatures[i]&gt;temperatures[stack[stack.<span class="property">length</span>-<span class="number">1</span>]])&#123;</span><br><span class="line">            <span class="keyword">const</span> index=stack.<span class="title function_">pop</span>()</span><br><span class="line">            ans[index]=i-index</span><br><span class="line">        &#125;</span><br><span class="line">        stack.<span class="title function_">push</span>(i)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="901-股票价格跨度"><a href="#901-股票价格跨度" class="headerlink" title="901.股票价格跨度"></a>901.股票价格跨度</h4><p><strong>题目：</strong></p>
+<p>设计一个算法收集某些股票的每日报价，并返回该股票当日价格的跨度 。<br>当日股票价格的 跨度 被定义为股票价格小于或等于今天价格的最大连续日数（从今天开始往回数，包括今天）。<br>例如，如果未来 7 天股票的价格是 [100,80,60,70,60,75,85]，那么股票跨度将是 [1,1,1,2,1,4,6] 。<br>实现 StockSpanner 类：<br>StockSpanner() 初始化类对象。<br>int next(int price) 给出今天的股价 price ，返回该股票当日价格的 跨度 。</p>
+<hr>
+<p><strong>解析：</strong></p>
+<p><strong><font color="#483D8B">单调栈</font></strong> 即栈中放的数据单调有序</p>
+<p>本题是倒着过去的，找出一个元素左边第一个大于该元素 ，本质上也是用当前元素的价格和栈顶元素价格比较，小的就弹出来，直到一个更大的，返回两个元素下标差，把当前元素入栈</p>
+<p>需要注意的是因为本题是通过调用一个next函数返回值，所以把下标和价格储存成一个二元数对更方便。为了防止栈空，把第一个栈元素设置为下标-1和价格无穷大</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">price</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">StockSpanner</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">stack</span> = [];</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">stack</span>.<span class="title function_">push</span>([-<span class="number">1</span>, <span class="title class_">Number</span>.<span class="property">MAX_VALUE</span>]);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">idx</span> = -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="title class_">StockSpanner</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">next</span> = <span class="keyword">function</span>(<span class="params">price</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">idx</span>++;</span><br><span class="line">    <span class="keyword">while</span> (price &gt;= <span class="variable language_">this</span>.<span class="property">stack</span>[<span class="variable language_">this</span>.<span class="property">stack</span>.<span class="property">length</span> - <span class="number">1</span>][<span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">stack</span>.<span class="title function_">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> ret = <span class="variable language_">this</span>.<span class="property">idx</span> - <span class="variable language_">this</span>.<span class="property">stack</span>[<span class="variable language_">this</span>.<span class="property">stack</span>.<span class="property">length</span> - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">stack</span>.<span class="title function_">push</span>([<span class="variable language_">this</span>.<span class="property">idx</span>, price]);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="735-小行星碰撞"><a href="#735-小行星碰撞" class="headerlink" title="735.小行星碰撞"></a>735.小行星碰撞</h4><p><strong>题目：</strong></p>
+<p>给定一个整数数组 asteroids，表示在同一行的小行星。<br>对于数组中的每一个元素，其绝对值表示小行星的大小，正负表示小行星的移动方向（正表示向右移动，负表示向左移动）。每一颗小行星以相同的速度移动。<br>找出碰撞后剩下的所有小行星。碰撞规则：两个小行星相互碰撞，较小的小行星会爆炸。如果两颗小行星大小相同，则两颗小行星都会爆炸。两颗移动方向相同的小行星，永远不会发生碰撞。</p>
+<hr>
+<p><strong>解析：</strong></p>
+<p>题目规则简化是数组相邻元素左正右负就只留下绝对值更大的，不断碰撞直到只剩下左正右负的相邻元素  </p>
+<p>代码逻辑是用栈来模拟行星碰撞，逐一遍历数组，将元素依次压入栈中，当出现左正右负时，先比较其和栈顶元素绝对值大小，同时修改alive状态，直到左正右负消失，alive的值决定是否push元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">asteroids</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> asteroidCollision = <span class="keyword">function</span> (<span class="params">asteroids</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> stack = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> aster <span class="keyword">of</span> asteroids) &#123;</span><br><span class="line">        <span class="comment">//代表每次遍历要压入栈的那个行星是否爆炸</span></span><br><span class="line">        <span class="keyword">let</span> alive = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (alive &amp;&amp; stack.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; stack[stack.<span class="property">length</span> - <span class="number">1</span>] &gt; <span class="number">0</span> &amp;&amp; aster &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">//入栈元素大于栈顶元素绝对值才设置alive为true</span></span><br><span class="line">            alive = stack[stack.<span class="property">length</span> - <span class="number">1</span>] &lt; -aster;</span><br><span class="line">            <span class="keyword">if</span> (stack[stack.<span class="property">length</span> - <span class="number">1</span>] &lt;= -aster) &#123;</span><br><span class="line">                stack.<span class="title function_">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (alive) &#123;</span><br><span class="line">            stack.<span class="title function_">push</span>(aster);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> size = stack.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> ans = <span class="keyword">new</span> <span class="title class_">Array</span>(size).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = size - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        ans[i] = stack.<span class="title function_">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
                 </div>
 
@@ -495,14 +512,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/03/07/%E4%BA%8C%E6%88%98%E8%85%BE%E8%AE%AF/"
-                                   title="二战腾讯"
+                                   href="/2024/03/08/LearningNotes/"
+                                   title="LearningNotes"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">二战腾讯</span>
+                                        <span class="post-nav-title-item text-ellipsis">LearningNotes</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -512,11 +529,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/03/06/%E4%B8%80%E6%88%98%E8%85%BE%E8%AE%AF/"
-                                   title="一战腾讯"
+                                   href="/2024/03/07/%E4%BA%8C%E6%88%98%E8%85%BE%E8%AE%AF/"
+                                   title="二战腾讯"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">一战腾讯</span>
+                                        <span class="post-nav-title-item text-ellipsis">二战腾讯</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -616,7 +633,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%BA%93LeetCode75"><span class="nav-text">题库LeetCode75</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1137-%E7%AC%ACN%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">1137.第N个泰波那契数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90"><span class="nav-text">1071.字符串的最大公因子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6"><span class="nav-text">739.每日温度</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%BA%93LeetCode75"><span class="nav-text">题库LeetCode75</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1137-%E7%AC%ACN%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">1137.第N个泰波那契数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90"><span class="nav-text">1071.字符串的最大公因子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6"><span class="nav-text">739.每日温度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#901-%E8%82%A1%E7%A5%A8%E4%BB%B7%E6%A0%BC%E8%B7%A8%E5%BA%A6"><span class="nav-text">901.股票价格跨度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#735-%E5%B0%8F%E8%A1%8C%E6%98%9F%E7%A2%B0%E6%92%9E"><span class="nav-text">735.小行星碰撞</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -656,7 +673,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">13.5k</span>
+                    <span class="item-value border-box word">14.4k</span>
                 </span>
             
 
@@ -798,7 +815,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%BA%93LeetCode75"><span class="nav-text">题库LeetCode75</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1137-%E7%AC%ACN%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">1137.第N个泰波那契数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90"><span class="nav-text">1071.字符串的最大公因子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6"><span class="nav-text">739.每日温度</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E5%BA%93LeetCode75"><span class="nav-text">题库LeetCode75</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#334-%E9%80%92%E5%A2%9E%E7%9A%84%E4%B8%89%E5%85%83%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-text">334.递增的三元子序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#215-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0"><span class="nav-text">215.数组中的第K个最大元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="nav-text">72.编辑距离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1137-%E7%AC%ACN%E4%B8%AA%E6%B3%B0%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">1137.第N个泰波那契数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1071-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90"><span class="nav-text">1071.字符串的最大公因子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6"><span class="nav-text">739.每日温度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#901-%E8%82%A1%E7%A5%A8%E4%BB%B7%E6%A0%BC%E8%B7%A8%E5%BA%A6"><span class="nav-text">901.股票价格跨度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#735-%E5%B0%8F%E8%A1%8C%E6%98%9F%E7%A2%B0%E6%92%9E"><span class="nav-text">735.小行星碰撞</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
