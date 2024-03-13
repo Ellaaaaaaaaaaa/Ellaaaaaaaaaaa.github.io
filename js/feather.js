@@ -1,6 +1,7 @@
 var stop, staticx;
 var img = new Image();
-img.src = "/images/feather.svg";
+img.src =
+  "https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/background/feather.58h45d7xpc.svg";
 
 function Sakura(x, y, s, r, fn) {
   this.x = x;
@@ -116,7 +117,7 @@ function startSakura() {
   canvas.width = window.innerWidth;
   canvas.setAttribute(
     "style",
-    "position: fixed;left: 0;top: 0;pointer-events: none;opacity: 0.4;"
+    "position: fixed;left: 0;top: 0;pointer-events: none;opacity: 0.3;"
   );
   canvas.setAttribute("id", "canvas_sakura");
   document.getElementsByTagName("body")[0].appendChild(canvas);
