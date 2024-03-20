@@ -326,182 +326,75 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <p>记录了我自己准备前端面试时复习的内容</p>
-<span id="more"></span>
+                    <p>记录了我自己准备前端面试时复习的内容<br><span id="more"></span></p>
 <p>参考了 <a class="link"   target="_blank" rel="noopener" href="https://vue3js.cn/interview/" >https://vue3js.cn/interview/<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="html-css"><a class="markdownIt-Anchor" href="#html-css"></a> HTML CSS</h2>
-<h2 id="javascript"><a class="markdownIt-Anchor" href="#javascript"></a> JavaScript</h2>
-<ol>
-<li>回调函数<br />
-嵌套 函数体在完成某种操作后由内向外调用某个外部函数<br />
-函数作为参数传递给另外一个函数<br />
-回调地狱<br />
-回调函数是一个this对象的方法时，必须保证this对象的上下文，Call和Apply函数来保存this</li>
+<h2 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML CSS"></a>HTML CSS</h2><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ol>
+<li>回调函数<br>嵌套 函数体在完成某种操作后由内向外调用某个外部函数<br>函数作为参数传递给另外一个函数<br>回调地狱<br>回调函数是一个this对象的方法时，必须保证this对象的上下文，Call和Apply函数来保存this</li>
 </ol>
-<h2 id="es6"><a class="markdownIt-Anchor" href="#es6"></a> ES6</h2>
-<ol>
-<li>var let const<br />
-作用域. 变量提升. 重复声明. 暂时性死区</li>
-<li>数组新增
-<ol>
-<li>… 数组变成参数序列<br />
-浅拷贝 解构赋值 参数最后一位 iterator对象转成数组</li>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><ol>
+<li>var let const<br>作用域. 变量提升. 重复声明. 暂时性死区</li>
+<li>数组新增<ol>
+<li>… 数组变成参数序列<br>浅拷贝 解构赋值 参数最后一位 iterator对象转成数组</li>
 <li>构造函数 Array.from() Array.of()</li>
-<li>实例对象方法<br />
-copyWithin() 复制覆盖<br />
-find(). findIndex() 查找<br />
-fill() 填充<br />
-entries()，keys()，values() 遍历<br />
-includes() 判断是否包含<br />
-flat()，flatMap() 扁平化（层数）</li>
+<li>实例对象方法<br>copyWithin() 复制覆盖<br>find(). findIndex() 查找<br>fill() 填充<br>entries()，keys()，values() 遍历<br>includes() 判断是否包含<br>flat()，flatMap() 扁平化（层数）</li>
 </ol>
 </li>
-<li>对象新增
-<ol>
+<li>对象新增<ol>
 <li>简写</li>
 <li>属性名表达式</li>
 <li>super指向当前对象的原型对象</li>
 <li>扩展运算符 解构赋值 浅拷贝</li>
-<li>属性遍历 数值键-&gt;字符串键-&gt;symbol键<br />
-for…in：循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）<br />
-Object.keys(obj)：返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名<br />
-Object.getOwnPropertyNames(obj)：回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名<br />
-Object.getOwnPropertySymbols(obj)：返回一个数组，包含对象自身的所有 Symbol 属性的键名<br />
-Reflect.ownKeys(obj)：返回一个数组，包含对象自身的（不含继承的）所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举</li>
-<li>方法<br />
-<a class="link"   target="_blank" rel="noopener" href="http://Object.is" >Object.is<i class="fas fa-external-link-alt"></i></a>() 严格相等 +0不等于-0，NaN等于自身<br />
-Object.assign() 对象合并 浅拷贝替换<br />
-Object.getOwnPropertyDescriptors()<br />
-Object.setPrototypeOf()，Object.getPrototypeOf()<br />
-Object.keys()，Object.values()，Object.entries()<br />
-Object.fromEntries()</li>
+<li>属性遍历 数值键-&gt;字符串键-&gt;symbol键<br>for…in：循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）<br>Object.keys(obj)：返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名<br>Object.getOwnPropertyNames(obj)：回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名<br>Object.getOwnPropertySymbols(obj)：返回一个数组，包含对象自身的所有 Symbol 属性的键名<br>Reflect.ownKeys(obj)：返回一个数组，包含对象自身的（不含继承的）所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举</li>
+<li>方法<br>Object.is() 严格相等 +0不等于-0，NaN等于自身<br>Object.assign() 对象合并 浅拷贝替换<br>Object.getOwnPropertyDescriptors()<br>Object.setPrototypeOf()，Object.getPrototypeOf()<br>Object.keys()，Object.values()，Object.entries()<br>Object.fromEntries()</li>
 </ol>
 </li>
-<li>函数新增
-<ol>
+<li>函数新增<ol>
 <li>参数 尾参数</li>
 <li>length name</li>
 <li>箭头函数 参数=&gt;返回值</li>
 </ol>
 </li>
-<li>Set Map
-<ol>
-<li>Set<br />
-add() delete() has() clear()<br />
-keys()：返回键名的遍历器<br />
-values()：返回键值的遍历器<br />
-entries()：返回键值对的遍历器<br />
-forEach()：使用回调函数遍历每个成员<br />
-数组字符串去重<br />
-filter 并集交集差集</li>
-<li>Map<br />
-set() get() has() delete() clear()<br />
-keys()：返回键名的遍历器<br />
-values()：返回键值的遍历器<br />
-entries()：返回所有成员的遍历器<br />
-forEach()：遍历 Map 的所有成员<br />
-weak没有遍历属性</li>
+<li>Set Map<ol>
+<li>Set<br>add() delete() has() clear()<br>keys()：返回键名的遍历器<br>values()：返回键值的遍历器<br>entries()：返回键值对的遍历器<br>forEach()：使用回调函数遍历每个成员<br>数组字符串去重<br>filter 并集交集差集</li>
+<li>Map<br>set() get() has() delete() clear()<br>keys()：返回键名的遍历器<br>values()：返回键值的遍历器<br>entries()：返回所有成员的遍历器<br>forEach()：遍历 Map 的所有成员<br>weak没有遍历属性</li>
 </ol>
 </li>
-<li>promise<br />
-Promise(function(resolve, reject) {})<br />
-then()<br />
-catch()<br />
-finally()<br />
-Promise对象的错误具有“冒泡”性质，会一直向后传递，直到被捕获为止</li>
-<li>generator<br />
-function关键字与函数名之间有一个星号<br />
-函数体内部使用yield表达式，定义不同的内部状态<br />
-通过next方法才会遍历，直到一个yield表达式暂停，返回值是yield表达式的值，下一次next方法继续，直到return<br />
-next可以带一个参数，当做一个yield表达式的返回值<br />
-返回的是Iterator对象，可以通过for…of进行遍历</li>
-<li>异步处理<br />
-回调函数<br />
-Promise 对象<br />
-generator 函数 可以控制迭代<br />
-async/await 本质上generator</li>
-<li>proxy<br />
-用于创建一个对象的代理，从而实现基本操作的拦截和自定义<br />
-var proxy = new Proxy(target, handler)<br />
-Reflect 的所有属性和方法都是静态的（ Math 对象），提供拦截 JavaScript 操作的方法<br />
-get() set() deleteProperty()<br />
-Proxy.revocable(target, handler);取消代理<br />
-在复杂操作前对操作进行校验或对所需资源进行管理<br />
-拦截和监视外部对对象的访问<br />
-使用 Proxy 保障数据类型的准确性<br />
-使用Proxy实现观察者模式，观察者模式（Observer mode）指的是函数自动观察数据对象，一旦对象有变化，函数就会自动执行</li>
-<li>module<br />
-静态化 在编译时就完成模块加载<br />
-export：用于规定模块的对外接口<br />
-import：用于输入其他模块提供的功能</li>
-<li>decorator<br />
-装饰器命名相当于一个注释，在不改变原有代码情况下，对类和类属性原来功能进行扩充<br />
-不能修饰函数</li>
+<li>promise<br>Promise(function(resolve, reject) {})<br>then()<br>catch()<br>finally()<br>Promise对象的错误具有“冒泡”性质，会一直向后传递，直到被捕获为止</li>
+<li>generator<br>function关键字与函数名之间有一个星号<br>函数体内部使用yield表达式，定义不同的内部状态<br>通过next方法才会遍历，直到一个yield表达式暂停，返回值是yield表达式的值，下一次next方法继续，直到return<br>next可以带一个参数，当做一个yield表达式的返回值<br>返回的是Iterator对象，可以通过for…of进行遍历</li>
+<li>异步处理<br>回调函数<br>Promise 对象<br>generator 函数 可以控制迭代<br>async/await 本质上generator</li>
+<li>proxy<br>用于创建一个对象的代理，从而实现基本操作的拦截和自定义<br>var proxy = new Proxy(target, handler)<br>Reflect 的所有属性和方法都是静态的（ Math 对象），提供拦截 JavaScript 操作的方法<br>get() set() deleteProperty()<br>Proxy.revocable(target, handler);取消代理<br>在复杂操作前对操作进行校验或对所需资源进行管理<br>拦截和监视外部对对象的访问<br>使用 Proxy 保障数据类型的准确性<br>使用Proxy实现观察者模式，观察者模式（Observer mode）指的是函数自动观察数据对象，一旦对象有变化，函数就会自动执行</li>
+<li>module<br>静态化 在编译时就完成模块加载<br>export：用于规定模块的对外接口<br>import：用于输入其他模块提供的功能</li>
+<li>decorator<br>装饰器命名相当于一个注释，在不改变原有代码情况下，对类和类属性原来功能进行扩充<br>不能修饰函数</li>
 </ol>
-<h2 id="vuejs"><a class="markdownIt-Anchor" href="#vuejs"></a> Vue.js</h2>
-<h2 id="nodejs"><a class="markdownIt-Anchor" href="#nodejs"></a> Node.js</h2>
-<p>Node.js 是一个开源与跨平台的 JavaScript 运行时环境<br />
-事件驱动、非阻塞和异步输入输出模型</p>
-<h2 id="算法"><a class="markdownIt-Anchor" href="#算法"></a> 算法</h2>
-<ol>
-<li>前端<br />
-diff算法 深度优先算法 时间复杂度:O(n) 最小量更新<br />
-patch 比较虚拟DOM根节点是否同一类型，不同直接替换<br />
-|<br />
-patchVnode 进一步比较两个虚拟节点 有无text和children<br />
-|<br />
-updateChildren 都有子节点的情况下比较更新真实节点<br />
-四个指针，指向oldVnode子节点列表中的第一个节点和最后一个节点以及指向newVnode子节点列表中的第一个节点和最后一个节点，节点比较过，前的指针++，后的指针–
-<ol>
+<h2 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h2><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>Node.js 是一个开源与跨平台的 JavaScript 运行时环境<br>事件驱动、非阻塞和异步输入输出模型</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ol>
+<li>前端<br>diff算法 深度优先算法 时间复杂度:O(n) 最小量更新<br>patch 比较虚拟DOM根节点是否同一类型，不同直接替换<br>|<br>patchVnode 进一步比较两个虚拟节点 有无text和children<br>|<br>updateChildren 都有子节点的情况下比较更新真实节点<br> 四个指针，指向oldVnode子节点列表中的第一个节点和最后一个节点以及指向newVnode子节点列表中的第一个节点和最后一个节点，节点比较过，前的指针++，后的指针—<ol>
 <li>oldS 和 newS 使用sameVnode方法进行比较，sameVnode(oldS, newS)</li>
 <li>oldS 和 newE 使用sameVnode方法进行比较，sameVnode(oldS, newE)，相同的话移动真实节点OE之后</li>
 <li>oldE 和 newS 使用sameVnode方法进行比较，sameVnode(oldE, newS)，相同的话移动真实节点OS之前</li>
 <li>oldE 和 newE 使用sameVnode方法进行比较，sameVnode(oldE, newE)</li>
-<li>如果以上逻辑都匹配不到，再把所有旧子节点的 key 做一个映射到旧节点下标的 key -&gt; index 表，然后用新 vnode 的 key 去找出在旧节点中可以复用的位置</li>
+<li>如果以上逻辑都匹配不到，再把所有旧子节点的 key 做一个映射到旧节点下标的 key -&gt; index 表，然后用新 vnode 的 key 去找出在旧节点中可以复用的位置</li>
 <li>old先处理完，新增newS和newE之间的节点</li>
-<li>new先处理完，删除oldS和oldE之间的节点<br />
-key的设置 判断两个虚拟节点是否为相同节点<br />
-不建议用index作为循环项的key，因为操作过程中index会改变，一些相同节点index变了会被当成新的节点，用id的话每个节点key都不同，便于更新时复用节点</li>
+<li>new先处理完，删除oldS和oldE之间的节点<br>key的设置 判断两个虚拟节点是否为相同节点<br>不建议用index作为循环项的key，因为操作过程中index会改变，一些相同节点index变了会被当成新的节点，用id的话每个节点key都不同，便于更新时复用节点</li>
 </ol>
 </li>
-<li>排序<br />
-<img  
+<li>排序<br><img  
                        lazyload
                        alt="image"
-                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/image.9nzjamuzyq.webp"
-                        alt="alt text" 
+                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/技术学习/image.9nzjamuzyq.webp"
+                        alt="alt text"
                  ></li>
-<li>数据结构<br />
-数组<br />
-栈<br />
-队列<br />
-链表<br />
-树<br />
-图<br />
-堆<br />
-散列表</li>
-<li>经典算法<br />
-<img  
+<li>数据结构<br>数组<br>栈<br>队列<br>链表<br>树<br>图<br>堆<br>散列表  </li>
+<li>经典算法<br><img  
                        lazyload
                        alt="image"
-                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/image-1.45fg3ioic.webp"
-                        alt="alt text" 
+                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/技术学习/image-1.45fg3ioic.webp"
+                        alt="alt text"
                  ></li>
 </ol>
-<h2 id="网络协议"><a class="markdownIt-Anchor" href="#网络协议"></a> 网络协议</h2>
-<ol>
-<li>
-<p>HTTP<br />
-C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 不安全<br />
-默认端口80<br />
-无连接：限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间<br />
-无状态：HTTP协议无法根据之前的状态进行本次的请求处理</p>
-</li>
-<li>
-<p>HTTPS<br />
-加密传输  让HTTP运行安全的SSL/TLS协议(TCP/IP 协议与应用层协议之间)上<br />
-默认端口443  因为加密和多次握手，性能相对较差<br />
-通信过程:</p>
+<h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><ol>
+<li>HTTP<br>C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 不安全<br>默认端口80<br>无连接：限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间<br>无状态：HTTP协议无法根据之前的状态进行本次的请求处理  </li>
+<li><p>HTTPS<br>加密传输  让HTTP运行安全的SSL/TLS协议(TCP/IP 协议与应用层协议之间)上<br>默认端口443  因为加密和多次握手，性能相对较差<br>通信过程:</p>
 <ul>
 <li>首先客户端通过URL访问服务器建立SSL连接</li>
 <li>服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端</li>
@@ -511,44 +404,35 @@ C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 �
 <li>服务器利用会话密钥加密与客户端之间的通信</li>
 </ul>
 </li>
-<li>
-<p>SSL</p>
+<li><p>SSL</p>
 <ul>
 <li>对称加密：加密和解密使用的秘钥是同一个，秘钥发送的过程中容易被窃取</li>
-<li>非对称加密：有公钥和私钥，公钥加密后只能用私钥解密，私钥加密后也只能用公钥解密</li>
-<li>混合加密：<br />
-发送者用会话密钥加密消息（对称），用公钥加密的会话密钥（非对称），两个一起发送<br />
-消息接收者用自己的私钥解密出会话密钥，用会话密钥解密消息</li>
+<li>非对称加密：有公钥和私钥，公钥加密后只能用私钥解密，私钥加密后也只能用公钥解密  </li>
+<li><p>混合加密：<br>发送者用会话密钥加密消息（对称），用公钥加密的会话密钥（非对称），两个一起发送<br>消息接收者用自己的私钥解密出会话密钥，用会话密钥解密消息  </p>
+<p>摘要算法：<br>会话密钥 对称的 明文和摘要一起加密<br>验证信息的完整性  散列函数、哈希函数<br>把消息数据转化成一个特殊字符串，接收者比对接收到的明文计算出的消息摘要和接收到的信息摘要  </p>
+<p>数字签名：<br>公私钥 非对称  身份验证<br>摘要私钥加密成数字签名，公钥解开后再比对原文验证  </p>
+<p>CA验证机构:  </p>
+<ol>
+<li>服务器有一套公钥和私钥，把公钥发给CA机构</li>
+<li>CA机构用机构私钥给服务器公钥署数字签名，颁发公钥证书(服务器公钥+数字签名)</li>
+<li>浏览器中预设了机构公钥，客户端拿到服务器的公钥证书，可以自行解密数字签名，得到服务器公钥，跟公钥证书比对</li>
+<li>客户端用服务器公钥加密报文，服务器用服务器私钥解密</li>
+</ol>
+</li>
 </ul>
-<p>摘要算法：<br />
-会话密钥 对称的 明文和摘要一起加密<br />
-验证信息的完整性  散列函数、哈希函数<br />
-把消息数据转化成一个特殊字符串，接收者比对接收到的明文计算出的消息摘要和接收到的信息摘要</p>
-<p>数字签名：<br />
-公私钥 非对称  身份验证<br />
-摘要私钥加密成数字签名，公钥解开后再比对原文验证</p>
-<p>CA验证机构:<br />
-1. 服务器有一套公钥和私钥，把公钥发给CA机构<br />
-2. CA机构用机构私钥给服务器公钥署数字签名，颁发公钥证书(服务器公钥+数字签名)<br />
-3. 浏览器中预设了机构公钥，客户端拿到服务器的公钥证书，可以自行解密数字签名，得到服务器公钥，跟公钥证书比对<br />
-4. 客户端用服务器公钥加密报文，服务器用服务器私钥解密</p>
 </li>
-<li>
-<p>UDP</p>
+<li><p>UDP</p>
 </li>
-<li>
-<p>TCP</p>
+<li><p>TCP</p>
 </li>
 </ol>
-<h2 id="git"><a class="markdownIt-Anchor" href="#git"></a> Git</h2>
-<p><img  
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><img  
                        lazyload
                        alt="image"
-                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/image-2.6bgtg9efmh.webp"
-                        alt="alt text" 
+                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/技术学习/image-2.6bgtg9efmh.webp"
+                        alt="alt text"
                  ></p>
-<h2 id="echarts可视化"><a class="markdownIt-Anchor" href="#echarts可视化"></a> echarts可视化</h2>
-<p>最重要的就是id问题，不能重复</p>
+<h2 id="echarts可视化"><a href="#echarts可视化" class="headerlink" title="echarts可视化"></a>echarts可视化</h2><p>最重要的就是id问题，不能重复</p>
 <ol>
 <li>provide inject导入echarts对象</li>
 <li>获取后端数据</li>
@@ -557,9 +441,7 @@ C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 �
 <li>自适应大小window.onresize = function () {myChart1.resize();}</li>
 <li>放echarts的容器要预先设置大小才会渲染</li>
 </ol>
-<h2 id="express"><a class="markdownIt-Anchor" href="#express"></a> express</h2>
-<h2 id="mongodb"><a class="markdownIt-Anchor" href="#mongodb"></a> MongoDB</h2>
-
+<h2 id="express"><a href="#express" class="headerlink" title="express"></a>express</h2><h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2>
                 </div>
                 
                         
@@ -681,19 +563,35 @@ C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 �
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/03/04/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-                                   title="vue学习笔记"
+                                   href="/2024/03/04/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                   title="JavaScript学习笔记"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">vue学习笔记</span>
+                                        <span class="post-nav-title-item text-ellipsis">JavaScript学习笔记</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
                             </div>
                         
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/03/04/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                   title="vue学习笔记"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">vue学习笔记</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
                         
                     </div>
                 
@@ -786,7 +684,7 @@ C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 �
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#html-css"><span class="nav-text"> HTML CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript"><span class="nav-text"> JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6"><span class="nav-text"> ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vuejs"><span class="nav-text"> Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs"><span class="nav-text"> Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text"> 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text"> 网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-text"> Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text"> echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text"> express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongodb"><span class="nav-text"> MongoDB</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-CSS"><span class="nav-text">HTML CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js"><span class="nav-text">Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text">express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol>
     </div>
 </div>
 
@@ -825,7 +723,7 @@ C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 �
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">23.1k</span>
+                    <span class="item-value border-box word">13.4k</span>
                 </span>
             
 
@@ -972,7 +870,7 @@ C/S模式 可以传输任意类型数据对象  明文传输，无身份验证 �
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#html-css"><span class="nav-text"> HTML CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript"><span class="nav-text"> JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6"><span class="nav-text"> ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vuejs"><span class="nav-text"> Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs"><span class="nav-text"> Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text"> 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text"> 网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-text"> Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text"> echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text"> express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongodb"><span class="nav-text"> MongoDB</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-CSS"><span class="nav-text">HTML CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js"><span class="nav-text">Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text">express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol>
     </div>
 </div>
 
