@@ -23,12 +23,14 @@ Sakura.prototype.update = function () {
   this.x = this.fn.x(this.x, this.y);
   this.y = this.fn.y(this.y, this.y);
   this.r = this.fn.r(this.r);
+  // 如果超出窗口边界，重新设置位置和属性
   if (
     this.x > window.innerWidth ||
     this.x < 0 ||
     this.y > window.innerHeight ||
     this.y < 0
   ) {
+    // 获取随机旋转角度
     this.r = getRandom("fnr");
     if (Math.random() > 0.4) {
       this.x = getRandom("x");
@@ -147,8 +149,11 @@ function startSakura() {
     stop = requestAnimationFrame(arguments.callee);
   });
 }
+// 页面大小改变时重新设置画布大小
 window.onresize = function () {
-  var canvasSnow = document.getElementById("canvas_snow");
+  var canvasSakura = document.getElementById("canvas_sakura");
+  canvasSakura.height = window.innerHeight;
+  canvasSakura.width = window.innerWidth;
 };
 img.onload = function () {
   startSakura();
