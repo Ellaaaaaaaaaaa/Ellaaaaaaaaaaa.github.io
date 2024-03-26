@@ -1096,8 +1096,8 @@
     .low-poly {
       z-index: 200;
       transform-origin: center;
-      -webkit-animation: pulse-grow-main 0s ease-in-out 4s infinite alternate;
-      animation: pulse-grow-main 0s ease-in-out 4s infinite alternate; /* 0.8*/
+      -webkit-animation: pulse-grow-main 0s ease-in-out 5s infinite alternate;
+      animation: pulse-grow-main 0s ease-in-out 5s infinite alternate; /* 0.8*/
       opacity: 1;
     }
 
@@ -1344,13 +1344,13 @@
 
     @-webkit-keyframes pulse-grow-top-192 {
       to {
-        transform: scale(1.04);
+        transform: scale(1.02);
       }
     }
 
     @keyframes pulse-grow-top-192 {
       to {
-        transform: scale(1.04);
+        transform: scale(1.02);
       }
     }
 
