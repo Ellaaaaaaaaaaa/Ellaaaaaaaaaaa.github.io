@@ -1356,25 +1356,25 @@
 
     @-webkit-keyframes pulse-grow-top {
       to {
-        transform: scale(1.09);
+        transform: scale(1.04);
       }
     }
 
     @keyframes pulse-grow-top {
       to {
-        transform: scale(1.09);
+        transform: scale(1.04);
       }
     }
 
     @-webkit-keyframes pulse-grow-bottom {
       to {
-        transform: scale(1.09);
+        transform: scale(1.04);
       }
     }
 
     @keyframes pulse-grow-bottom {
       to {
-        transform: scale(1.09);
+        transform: scale(1.04);
       }
     }
 
