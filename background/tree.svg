@@ -3,7 +3,9 @@
     svg {
       height: 100%;
       width: 100%;
-      background: #1e1423;
+      background: #21262d;
+      margin: 0;
+      padding: 0;
     }
     .bird-body,
     .bird-wing {
@@ -38,7 +40,7 @@
     }
 
     .st7 {
-      fill: hsl(280, 27%, 11%);
+      fill: #21262d;
     }
 
     .st8 {
@@ -1041,7 +1043,7 @@
     <g>
       <path
         class="st7"
-        d="M0 800h1280V0H0v800zm66-520C66 143 191 52 343 52h736c74 0 135 44 135 99l-22 529c0 2-2 3-5 3H70c-2 0-4-1-4-3V255z"
+        d="M0 825h1280V0H0v800zm66-520C66 143 191 52 343 52h736c74 0 135 44 135 99l-22 529c0 2-2 3-5 3H70c-2 0-4-1-4-3V255z"
       />
     </g>
     <linearGradient
