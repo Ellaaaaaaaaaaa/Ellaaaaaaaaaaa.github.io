@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Mar 26 2024 15:02:43 GMT+0800">2024-03-26 15:02:43</span>
+                <span class="datetime" data-updated="Fri Mar 29 2024 17:52:04 GMT+0800">2024-03-29 17:52:04</span>
             </span>
         
 
@@ -307,12 +307,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.9k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>4.3k 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>15 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>16 分钟</span>
             </span>
         
         
@@ -363,8 +363,10 @@
 </ul>
 </li>
 </ul>
-<p>indexOf() lastIndexOf() includes() find()查找位置，没找到返回-1<br>迭代方法<br>every() some() filter() forEach() map()<br>reduce() reduceRight()</p>
+<p>indexOf() lastIndexOf() includes() find()查找位置，没找到返回-1<br>迭代方法 都不会改变原数组<br>every() some() filter() forEach() map()<br>reduce() reduceRight()</p>
 <ul>
+<li><p>String类型<br>增删改查 都不是在原本字符串上修改，会创建新的副本<br>+或者concat()会创建新的字符串副本<br>slice() [开始索引，结束索引)前参数小于后参数否则返回空(负数加上字符串长度)<br>substr() [开始索引，开始索引+索引长度)<br>substring()[开始索引，结束索引)负数会看做0，参数可以任意顺序<br>trim()、trimLeft()、trimRight()删除字符串前后空格符，中间不删<br>repeat(n) 返回重复n次的拼接成果<br>padStart()、padEnd()复制字符串，如果小于指定长度，则在相应一边填充字符，直至满足长度条件<br>toLowerCase()、 toUpperCase()<br>chatAt()返回给定索引位置的字符<br>indexOf()返回给定字符的索引位置，没有-1<br>startWith() 返回是否包含的布尔值<br>includes() 返回是否包含的布尔值<br>split()把字符串按照指定的分割符，拆分成数组中的每一项<br>match()返回正则表达式匹配后分割的数组 search()返回第一个匹配项第一个字符索引 replace(a,b) 把字符串中的a替换成b返回</p>
+</li>
 <li><p>Date类型</p>
 </li>
 <li><p>RegExp类型 每一次要创建新的实例<br>g全局i不分大小写m多行<br>exec()</p>
@@ -372,6 +374,7 @@
 <li>function类型<br>function 函数名(参数){语句;}<br>var 函数名=function(参数){语句;};<br>一个函数可以有多个名字<br>没有重载<br>arguments callee用于解除代码和函数名的耦合<br>this 先局部再全局<br>call() apply()<br>基本包装类型<br>Boolean Number String<br>不能添加属性和方法<br>charAt() charCodeAt() slice() substr() substring() indexOf() trim() toLowerCase() toUpperCase() match() search() replace() split() localeCompare() fromCharCode()</li>
 </ul>
 <p>全局对象<br>URI编码方法<br>eval() 解析器 接受要执行的JS字符串<br>window对象<br>Math对象</p>
+<p>类型转换时的小坑<br>Boolean({}) // true<br>Boolean([]) // true<br>Boolean(new Boolean(false)) // true<br>隐式转换有自动转布尔值，自动转换字符串(+运算符)，自动转换数值(除+运算符)</p>
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>创建对象的方式</p>
 <ol>
 <li><p>使用对象字面量：<br>这是最简单和最常见的方式，直接在代码中定义对象。例如：</p>
@@ -784,7 +787,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">17.5k</span>
+                    <span class="item-value border-box word">17.8k</span>
                 </span>
             
 
