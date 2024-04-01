@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Apr 01 2024 09:37:25 GMT+0800">2024-04-01 09:37:25</span>
+                <span class="datetime" data-updated="Mon Apr 01 2024 21:27:10 GMT+0800">2024-04-01 21:27:10</span>
             </span>
         
 
@@ -307,12 +307,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>4.4k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>4.6k 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>16 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>17 分钟</span>
             </span>
         
         
@@ -431,12 +431,15 @@
                  ><br>搜索属性会沿着原型链往上<br>通过原型链实现继承的时候，不能使用对象字面量创建原型方法，因为会重写原型链<br>在每一个创建的子类对象上使用超类对象的call或者apply方法进行所有对象初始化<br>寄生组合式继承是最完美的继承方式<br>不必为指定子类型的原型而调用超类型的构造函数</p>
 <h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><ul>
 <li>函数声明:function 函数名(){}<br>函数声明可以置于调用语句之后</li>
-<li>函数表达式:var 变量名=function(){};<br>此为匿名函数<br>要先赋值才可以调用<br>编写递归函数，函数内部用argument.callee代替函数名<br>函数第一次调用创建一个执行环境和作用域链，并把作用域连赋值给一个特殊的内部属性scope，然后初始化活动对象，外部，外部的外部，知道作用域链终点全局执行环境<br><img  
+<li><p>函数表达式:var 变量名=function(){};<br>此为匿名函数<br>要先赋值才可以调用<br>编写递归函数，函数内部用argument.callee代替函数名<br>函数第一次调用创建一个执行环境和作用域链，并把作用域连赋值给一个特殊的内部属性scope，然后初始化活动对象，外部，外部的外部，知道作用域链终点全局执行环境<br><img  
                        lazyload
                        alt="image"
                        data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/技术学习/image-4.2ruvqgaet8.webp"
                         alt="Alt text"
-                 ></li>
+                 ></p>
+</li>
+<li><p>匿名函数<br>function(){}<br>如果是单独写匿名函数，要在外面加一个括号(function(){})，赋值/回调/返回时不加括号<br>然后单独要运行要在后面再加一个括号(function(){})()，这样可以模拟私有作用域</p>
+</li>
 </ul>
 <p>闭包，在另一个函数内部定义的函数会将外部函数的活动对象添加到它的作用域<br>闭包结构：</p>
 <ul>
@@ -450,6 +453,10 @@
 <li>让这些变量的值始终保持在内存中，延长变量的生命周期</li>
 </ul>
 <p>闭包只能取得包含函数中任何变量的最后一个值<br>解决方法是再嵌套一层函数，形成一个闭包<br>注意this的指向问题，可能闭包函数是在window作用域下执行的，this就不是指向外部函数而是window<br>内存泄漏问题，闭包引用外层对象，写一个变量保存对象副本，结束闭包后把对象置为null<br>多次声明同一变量，会对后续声明视而不见<br>在匿名函数中定义的任何变量都会在执行结束时被销毁<br>(function(){作用域})</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//因为var不是块级作用域，而setTimeout是会等当前作用域的函数调用栈清空了，才开始执行，所以for里面i会先加到6，才执行5个setTimeout，最后导致输出都是6</span></span><br><span class="line"><span class="comment">//最简单的办法是把var改成let，let有块级作用域，每次循环都是一个独立作用域中i，互不干扰</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//用闭包模拟了块级作用域</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">  (<span class="keyword">function</span> (<span class="params">j</span>) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(j);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;)(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>setTimeout()</li>
+</ul>
 <h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><ol>
 <li><p><strong>window对象</strong><br>全局作用域中声明的变量和函数收拾window对象的属性和方法<br>尝试访问未声明的变量会抛出错误，但是可以查询window对象判断未声明的对象是否存在<br><strong>窗口关系和框架</strong><br>top对象指向最外层框架即浏览器窗口<br>parent对象指向当前框架的直接上层框架<br>没有框架的情况下parent=top=window<br><strong>窗口位置和大小</strong><br>moveTo(x,y)移动到实际位置<br>moveBy(x,y)移动量<br>resizeTo(x,y)设置大小<br>resizeBy(x,y)新的和原来的差<br><strong>导航和打开窗口</strong><br>window.open()<br>参数：URL，窗口目标，特性字符串，新页面是否取代浏览器中当前加载页的布尔值<br>window.setTimeout()执行代码和等待时间<br>clearTimeout()取消超时调用<br>setInterval()间隔时间重复执行<br>clearInterval()</p>
 </li>
@@ -789,7 +796,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">19.5k</span>
+                    <span class="item-value border-box word">22.7k</span>
                 </span>
             
 
