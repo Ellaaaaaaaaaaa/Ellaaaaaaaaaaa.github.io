@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Mar 29 2024 17:52:04 GMT+0800">2024-03-29 17:52:04</span>
+                <span class="datetime" data-updated="Mon Apr 01 2024 09:37:25 GMT+0800">2024-04-01 09:37:25</span>
             </span>
         
 
@@ -307,7 +307,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>4.3k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>4.4k 字</span>
             </span>
         
         
@@ -355,8 +355,10 @@
 <li>垃圾收集<br>标记清除</li>
 </ol>
 <h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><ul>
-<li>object类型<br>用new创建；对象字面量<br>很像字典，都是花括号里属性名：属性值</li>
-<li>Array类型<br>每一项可以保存任何类型的数据，动态调整数组大小<br>Array(数字)表示数组项目数量<br>Array(其他类型参数)创建包含那个值的只有一项的数组<br>方括号[]索引<br>isArray()<br>toString() 每个值的字符串形式，以逗号分隔<br>valueOf()<br>join()分隔符 转换成字符串<br>push() pop() stack<br>shift()移除第一个 unshift()前端添加 list queue<br>reverse()翻转<br>sort()比较字符串 默认UTF-16 码元值升序排序 小心15&lt;5，从字符串上看 定义compare函数作为参数传入sort() 就地排序 不会复制<br>concat() 拼接字符串和多个数组的每一项<br>slice() 返回[开始索引，结束索引)中间的项，负数则用数组长度加上该数来确定位置<br>splice()<ul>
+<li><p>object类型<br>用new创建；对象字面量<br>很像字典，都是花括号里属性名：属性值<br>assign 静态方法将一个或者多个源对象中所有可枚举的自有属性复制到目标对象，并返回修改后的目标对象，当复制引用类型的属性时是浅拷贝，原型链上的属性和不可枚举的属性不能被复制</p>
+</li>
+<li><p>Array类型<br>每一项可以保存任何类型的数据，动态调整数组大小<br>Array(数字)表示数组项目数量<br>Array(其他类型参数)创建包含那个值的只有一项的数组<br>方括号[]索引<br>isArray()<br>toString() 每个值的字符串形式，以逗号分隔<br>valueOf()<br>join()分隔符 转换成字符串<br>push() pop() stack<br>shift()移除第一个 unshift()前端添加 list queue<br>reverse()翻转<br>sort()比较字符串 默认UTF-16 码元值升序排序 小心15&lt;5，从字符串上看 定义compare函数作为参数传入sort() 就地排序 不会复制<br>concat() 拼接字符串和多个数组的每一项 在内部元素为引用类型时是浅拷贝！<br>slice() 返回[开始索引，结束索引)中间的项，负数则用数组长度加上该数来确定位置 在内部元素为引用类型时是浅拷贝！<br>splice()</p>
+<ul>
 <li>删除 第一项位置，删除项数</li>
 <li>插入 起始位置，删除项数，插入的项</li>
 <li>替换 起始位置，删除项数，插入的项</li>
@@ -444,8 +446,8 @@
 </ul>
 <p>闭包作用：</p>
 <ul>
-<li>在函数外部可以读取函数内部的变量</li>
-<li>让这些变量的值始终保持在内存中</li>
+<li>在函数外部可以读取函数内部的变量，创建私有变量</li>
+<li>让这些变量的值始终保持在内存中，延长变量的生命周期</li>
 </ul>
 <p>闭包只能取得包含函数中任何变量的最后一个值<br>解决方法是再嵌套一层函数，形成一个闭包<br>注意this的指向问题，可能闭包函数是在window作用域下执行的，this就不是指向外部函数而是window<br>内存泄漏问题，闭包引用外层对象，写一个变量保存对象副本，结束闭包后把对象置为null<br>多次声明同一变量，会对后续声明视而不见<br>在匿名函数中定义的任何变量都会在执行结束时被销毁<br>(function(){作用域})</p>
 <h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><ol>
@@ -787,7 +789,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">17.8k</span>
+                    <span class="item-value border-box word">19.5k</span>
                 </span>
             
 
