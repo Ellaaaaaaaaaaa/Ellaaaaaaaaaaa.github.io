@@ -190,3 +190,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500); // 这里的延迟时间要和动画持续时间匹配
   };
 });
+// 禁止右键菜单
+document.oncontextmenu = function () {
+  return false;
+};
+// 禁止文字选择
+document.onselectstart = function () {
+  return true;
+};
+// 禁止复制
+document.oncopy = function () {
+  return false;
+};
+// 禁止剪切
+document.oncut = function () {
+  return false;
+};
