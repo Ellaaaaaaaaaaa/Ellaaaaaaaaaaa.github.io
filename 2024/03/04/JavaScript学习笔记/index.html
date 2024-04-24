@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Apr 10 2024 10:25:57 GMT+0800">2024-04-10 10:25:57</span>
+                <span class="datetime" data-updated="Wed Apr 24 2024 16:24:09 GMT+0800">2024-04-24 16:24:09</span>
             </span>
         
 
@@ -307,7 +307,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>5.8k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>5.9k 字</span>
             </span>
         
         
@@ -334,6 +334,7 @@
 <h2 id="lt-script-gt"><a href="#lt-script-gt" class="headerlink" title="&lt; script&gt;"></a>&lt; script&gt;</h2><p>async:下载脚本，外部脚本文件有效，不保证执行顺序<br>charset:src属性指定的字符集<br>defer:延迟到文档完全被解析后执行，外部脚本文件有效<br>src:包含执行代码的外部文件<br>type:脚本语言内容类型，默认值text/javascript  </p>
 <p>放在HTML文件底部<br>直接嵌入或包含外部文件<br>直接嵌入要指定type属性<br>\<script> \</script> 一对出现，函数内部出现记得用转义符号&lt;\/script&gt;<br>包含外部文件要指定src属性，\<script> \</script>中不包含额外代码<br>\<script type="text/javascript" src="a.js"> \</script><br>放在\<body>元素中页面内容的后面  </p>
 <h2 id="基本概念-只记录了一些跟我印象中不同的点"><a href="#基本概念-只记录了一些跟我印象中不同的点" class="headerlink" title="基本概念(只记录了一些跟我印象中不同的点)"></a>基本概念(只记录了一些跟我印象中不同的点)</h2><p>区分大小写<br>var创建变量是局部变量，省略后是全局变量<br>使用var和function声明的变量不可删除，因为被标记成不可配置了<br>delete不能删除全局变量，但是可以删除window对象上定义的属性<br>delete操作符跟直接释放内存无关，是断开引用间接完成的，对象的属性和数组成员才可以删除<br>这样的删除仍然占据内存空间，要设置null才能释放</p>
+<p>除法操作不会自动向下取整<br>1/2==0.5(js)<br>1/2==0(java)<br>1.0/2.0==0.5(java)</p>
 <ol>
 <li>数据类型  </li>
 </ol>
@@ -492,13 +493,13 @@
 <p>addEventListener(eventType, handler, useCapture)<br>removeEventListener(eventType, handler, useCapture)</p>
 <p>useCapture是一个boolean用于指定是否在捕获阶段进行处理，一般设置为false在冒泡过程中执行处理函数，与IE浏览器保持一致</p>
 <h2 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h2><ol>
-<li>变量声明<br>let const var<br>可以创建块作用域</li>
+<li>变量声明<br>let const var<br>可以创建块作用域<br>经常用const声明数组，并不是定义常量数组，定义的是对数组的常量引用，仍然可以更改数组元素</li>
 <li>剩余…<br>…参数 动态参数<br>…variable<br>…数组 拆解数组</li>
 <li>apply(this,array) call(this,arg)</li>
 <li>解构赋值<br>左侧定义了要取出的值<br>剩余属性位于末尾结束解构模式</li>
 <li>箭头函数<br>去掉function，直接(参数)=&gt;{}<br>不能用作方法<br>function定义的函数this随上下文变化而变化<br>箭头函数this始终指向定义函数的环境</li>
 <li>promise<br>Promise 构造函数是 JavaScript 中用于创建 Promise 对象的内置构造函数，接受一个函数作为参数，该函数是同步的并且会被立即执行，所以我们称之为起始函数。起始函数包含两个参数 resolve 和 reject，起始函数执行成功时，它应该调用 resolve 函数并传递成功的结果。当起始函数执行失败时，它应该调用 reject 函数并传递失败的原因。<br>then：用于处理 Promise 成功状态的回调函数。<br>catch：用于处理 Promise 失败状态的回调函数。<br>finally：无论 Promise 是成功还是失败，都会执行的回调函数。</li>
-<li>for in和 for of<br>数组遍历用for of，对象遍历用for in<br>for…in 语句以任意顺序迭代对象的可枚举属性。<br>for…of 语句遍历可迭代对象定义要迭代的数据。</li>
+<li>for in和 for of<br>数组遍历用for of，对象遍历用for in<br>for…in 语句以任意顺序迭代对象的可枚举属性。<br>for…of 语句遍历可迭代对象定义要迭代的数据。<br>可以for([key,value] of map)</li>
 </ol>
 <h2 id="运行时-runtime"><a href="#运行时-runtime" class="headerlink" title="运行时 runtime"></a>运行时 runtime</h2><p>JavaScript是一门解释执行语言。这意味着源代码在执行前，无需编译为二进制文件。JavaScript引擎以一段程序的形式存在，负责将源代码翻译为机器码，并通过 CPU来执行翻译后的机器码</p>
 <p>对比Java是先编译后执行的，能够将代码语法错误立即反馈给你。在JavaScript 中，只有当引擎尝试执行到有问题的那行代码时，才知道哪里出了问题。</p>
@@ -837,7 +838,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">47.3k</span>
+                    <span class="item-value border-box word">48.4k</span>
                 </span>
             
 
