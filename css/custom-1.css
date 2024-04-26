@@ -7,17 +7,26 @@
     --first-screen-font-size: 2.5rem;
 }
 
-.heimu, .heimu a, a .heimu, .heimu a.new {
+.hidden_black, .hidden_black a, a .hidden_black, .hidden_black a.new {
     background-color: #000000;
     color: #000000;
     text-shadow: none;
 }
-.heimu:hover, .heimu:active,
-.heimu:hover .heimu, .heimu:active .heimu {
+.hidden_black:hover, .hidden_black:active,
+.hidden_black:hover .hidden_black, .hidden_black:active .hidden_black {
     color: white !important;
 }
-blockquote {
-    background:#7278c5;
+.hidden_white, .hidden_white a, a .hidden_white, .hidden_white a.new {
+    background-color: #ffffff;
+    color: #ffffff;
+    text-shadow: none;
+}
+.hidden_white:hover, .hidden_white:active,
+.hidden_white:hover .hidden_white, .hidden_white:active .hidden_white {
+    color: #747acf !important;
 }
 
-    
+blockquote {
+    background:#747acf;
+}
+

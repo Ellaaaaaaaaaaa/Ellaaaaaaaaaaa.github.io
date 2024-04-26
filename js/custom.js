@@ -206,3 +206,12 @@ document.oncopy = function () {
 document.oncut = function () {
   return false;
 };
+function toggleDiv() {
+  var div = document.getElementById("toggle");
+
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
