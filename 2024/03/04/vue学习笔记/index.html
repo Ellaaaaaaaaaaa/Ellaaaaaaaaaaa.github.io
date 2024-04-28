@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Mar 08 2024 16:22:24 GMT+0800">2024-03-08 16:22:24</span>
+                <span class="datetime" data-updated="Sun Apr 28 2024 17:51:35 GMT+0800">2024-04-28 17:51:35</span>
             </span>
         
 
@@ -310,7 +310,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.4k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.5k 字</span>
             </span>
         
         
@@ -342,7 +342,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;todo-item v-<span class="attr">bind</span>:content=<span class="string">&quot;item&quot;</span> v-<span class="keyword">for</span>=<span class="string">&quot;item in list&quot;</span>&gt;&lt;/todo-item&gt;</span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">component</span>(<span class="string">&quot;TodoItem&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">props</span>: [<span class="string">&quot;content&quot;</span>],</span><br><span class="line">    <span class="attr">template</span>: <span class="string">&quot;&lt;li&gt;&#123;&#123;content&#125;&#125;&lt;/li&gt;&quot;</span>,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 <p>局部组件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">TodoItem</span> = &#123;</span><br><span class="line">    <span class="attr">props</span>: [<span class="string">&quot;content&quot;</span>],</span><br><span class="line">    <span class="attr">template</span>: <span class="string">&quot;&lt;li&gt;&#123;&#123;content&#125;&#125;&lt;/li&gt;&quot;</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">var</span> app = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">    <span class="attr">el</span>: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    <span class="attr">components</span>: &#123;</span><br><span class="line">      <span class="title class_">TodoItem</span>: <span class="title class_">TodoItem</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">      <span class="attr">list</span>: [<span class="string">&quot;first&quot;</span>, <span class="string">&quot;second&quot;</span>],</span><br><span class="line">      <span class="attr">inputValue</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">methods</span>: &#123;</span><br><span class="line">      <span class="attr">handleBtnClick</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">list</span>.<span class="title function_">push</span>(<span class="variable language_">this</span>.<span class="property">inputValue</span>);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">inputValue</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-<p>父子组件传值<br>父组件v-bind的格式向子组件传递，然后props里接收<br>子组件$emit向上一层触发事件，父组件监听获取</p>
+<p>父子组件传值<br>父组件v-bind的格式向子组件传递，然后props里接收<br>子组件$emit向上一层触发事件，父组件监听获取<br>props传递的数据是只读的</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;todo-item</span><br><span class="line">          v-<span class="attr">bind</span>:content=<span class="string">&quot;item&quot;</span></span><br><span class="line">          v-<span class="attr">bind</span>:index=<span class="string">&quot;index&quot;</span></span><br><span class="line">          v-<span class="keyword">for</span>=<span class="string">&quot;(item, index) in list&quot;</span></span><br><span class="line">          @<span class="keyword">delete</span>=<span class="string">&quot;handleItemDelete&quot;</span></span><br><span class="line">        &gt;</span><br><span class="line">        &lt;/todo-item&gt;</span><br><span class="line"><span class="keyword">var</span> <span class="title class_">TodoItem</span> = &#123;</span><br><span class="line">    <span class="attr">props</span>: [<span class="string">&#x27;content&#x27;</span>, <span class="string">&#x27;index&#x27;</span>],</span><br><span class="line">    <span class="attr">template</span>: <span class="string">&quot;&lt;li @click=&#x27;handleItemClick&#x27;&gt;&#123;&#123;content&#125;&#125;&lt;/li&gt;&quot;</span>,</span><br><span class="line">    <span class="attr">methods</span>: &#123;</span><br><span class="line">      <span class="attr">handleItemClick</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.$emit(<span class="string">&quot;delete&quot;</span>, <span class="variable language_">this</span>.<span class="property">index</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">var</span> app = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">    <span class="attr">el</span>: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    <span class="attr">components</span>: &#123;</span><br><span class="line">      <span class="title class_">TodoItem</span>: <span class="title class_">TodoItem</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">      <span class="attr">list</span>: [],</span><br><span class="line">      <span class="attr">inputValue</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">methods</span>: &#123;</span><br><span class="line">      <span class="attr">handleBtnClick</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">list</span>.<span class="title function_">push</span>(<span class="variable language_">this</span>.<span class="property">inputValue</span>);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">inputValue</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">handleItemDelete</span>: <span class="keyword">function</span> (<span class="params">index</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">list</span>.<span class="title function_">splice</span>(index, <span class="number">1</span>);</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);      </span><br></pre></td></tr></table></figure>
 <p>生命周期函数是指vue实例在某一个时间点会自动执行的函数<br><img  
                        lazyload
@@ -452,7 +452,7 @@
                         alt="Alt text"
                  ></li>
 <li>数组<br>变更方法<br>push()<br>pop()<br>shift()<br>unshift()<br>splice()<br>sort()<br>reverse()<br>非变更方法<br>filter(), concat(), slice()<br>reverse()和sort()调用之前创建一个原数组的副本</li>
-<li>事件处理<br>内敛事件 方法事件</li>
+<li>事件处理<br>内敛事件 方法事件<br>vue2中:这种写法自定义事件可以通过.native修饰符变成原生DOM事件<br>vue3为原生DOM事件</li>
 <li>生命周期<br>不要用箭头函数，否则无法用this访问组件实例</li>
 <li>watch侦听器</li>
 <li>路由<br>动态路由匹配 :传递<br>routes:{}里面的的路由地址可以有相对路径，可以嵌套子路径<br>\<router-link to="">&lt;/router-link>里面必须是绝对路径<br>$router.push(“”)JS实现页面跳转 ?传递<br>使用命名路由跳转的时候注意要用v-bind:to=”{name:’’,params:{}}”</li>
@@ -461,6 +461,12 @@
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>axios发送post请求会405</p>
 <p>bind()方法主要是可以改变原本函数的this指向</p>
 <p>ref用法<br>this.$ref.取到的是dom元素/组件实例</p>
+<ol>
+<li><script setup>
+
+</li>
+</ol>
+<p>在<script setup>的单文件组件里，组件不用显示注册，原来的一些emit、props都改用defineEmits()、defineProps()、defineModel()</p>
 <h2 id="开发注意小知识点"><a href="#开发注意小知识点" class="headerlink" title="开发注意小知识点"></a>开发注意小知识点</h2><ol>
 <li>\<router-link>传参是v-bind:to<br>:to=”{path:’/root’,query:{id:value}}”</li>
 <li>v-bind:class<br>以键值对的形式绑定操作</li>
@@ -657,14 +663,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/03/04/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-                                   title="JavaScript学习笔记"
+                                   href="/2024/03/06/%E4%B8%80%E6%88%98%E8%85%BE%E8%AE%AF/"
+                                   title="一战腾讯面经"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">JavaScript学习笔记</span>
+                                        <span class="post-nav-title-item text-ellipsis">一战腾讯面经</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -674,11 +680,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/03/04/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/"
-                                   title="前端面试知识点汇总"
+                                   href="/2024/03/04/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                   title="JavaScript学习笔记"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">前端面试知识点汇总</span>
+                                        <span class="post-nav-title-item text-ellipsis">JavaScript学习笔记</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -778,7 +784,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-text">vue基本语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3"><span class="nav-text">Vue3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">开发注意小知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="nav-text">前后端分离问题汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%AE%9E%E6%88%98"><span class="nav-text">echarts实战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3%E9%83%A8%E5%88%86%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">vue3部分问题解决方案</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-text">vue基本语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3"><span class="nav-text">Vue3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-text">问题</span></a></li></ol>
     </div>
 </div>
 
@@ -817,7 +823,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">50.7k</span>
+                    <span class="item-value border-box word">52k</span>
                 </span>
             
 
@@ -964,7 +970,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-text">vue基本语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3"><span class="nav-text">Vue3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">开发注意小知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="nav-text">前后端分离问题汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%AE%9E%E6%88%98"><span class="nav-text">echarts实战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3%E9%83%A8%E5%88%86%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">vue3部分问题解决方案</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-text">vue基本语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue3"><span class="nav-text">Vue3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-text">问题</span></a></li></ol>
     </div>
 </div>
 
