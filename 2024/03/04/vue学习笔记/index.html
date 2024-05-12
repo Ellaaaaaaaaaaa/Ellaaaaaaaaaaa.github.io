@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Apr 30 2024 16:41:00 GMT+0800">2024-04-30 16:41:00</span>
+                <span class="datetime" data-updated="Mon May 13 2024 01:27:33 GMT+0800">2024-05-13 01:27:33</span>
             </span>
         
 
@@ -310,7 +310,7 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.5k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.7k 字</span>
             </span>
         
         
@@ -495,9 +495,27 @@
 </li>
 <li><p>webpack<br><a class="link"   target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1797938" >https://cloud.tencent.com/developer/article/1797938<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>跨域问题</p>
+<li><p>跨域问题<br>cors<br>浏览器保护协议：只允许网页请求同一域名下的服务(域名和端口都要保持一致)</p>
 </li>
 </ol>
+<ul>
+<li><p>配置后端：<br>浏览器根据Access-Control-Allow-Origin响应头决定<br>*，允许所有请求<br>域名，允许指定域名请求<br>nodejs express 是添加cors中间件<br><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/技术学习/image.64do694oqg.webp"
+                        alt=""
+                 ></p>
+</li>
+<li><p>配置前端<br>找代理服务器发送请求<br>vite.config.js里面配置proxy把”/api”的内容转发到真实的后端服务路径<br><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://Ellaaaaaaaaaaa.github.io/picx-images-hosting/技术学习/image.32hs510p5a.webp"
+                        alt=""
+                 ></p>
+</li>
+<li><p>配置中转服务器<br>打包好的前端项目在dist目录下，index.html是入口文件<br>使用express或者nginx创建服务器发送前端页面并代理请求</p>
+</li>
+</ul>
 <h2 id="Vue3"><a href="#Vue3" class="headerlink" title="Vue3"></a>Vue3</h2><ol>
 <li>指令语法<br><img  
                        lazyload
@@ -826,7 +844,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">54.1k</span>
+                    <span class="item-value border-box word">56.8k</span>
                 </span>
             
 

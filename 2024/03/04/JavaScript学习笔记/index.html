@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Apr 26 2024 10:03:27 GMT+0800">2024-04-26 10:03:27</span>
+                <span class="datetime" data-updated="Tue May 07 2024 15:16:05 GMT+0800">2024-05-07 15:16:05</span>
             </span>
         
 
@@ -367,6 +367,7 @@
 </li>
 </ul>
 <p>indexOf() lastIndexOf() includes() find()查找位置，没找到返回-1<br>迭代方法 都不会改变原数组<br>every() some() filter() forEach() map()<br>reduce() reduceRight()</p>
+<p>map()映射的一个小技巧，使用const arr=new Array(n).fill(0).map((_,i)=&gt;i)让数组插入从0到n-1<br>也可以<br>const arr = […Array(n).keys()]</p>
 <ul>
 <li><p>String类型<br>增删改查 都不是在原本字符串上修改，会创建新的副本<br>+或者concat()会创建新的字符串副本<br>slice() [开始索引，结束索引)前参数小于后参数否则返回空(负数加上字符串长度)<br>substr() [开始索引，开始索引+索引长度)<br>substring()[开始索引，结束索引)负数会看做0，参数可以任意顺序<br>trim()、trimLeft()、trimRight()删除字符串前后空格符，中间不删<br>repeat(n) 返回重复n次的拼接成果<br>padStart()、padEnd()复制字符串，如果小于指定长度，则在相应一边填充字符，直至满足长度条件<br>toLowerCase()、 toUpperCase()<br>chatAt()返回给定索引位置的字符<br>indexOf()返回给定字符的索引位置，没有-1<br>startWith() 返回是否包含的布尔值<br>includes() 返回是否包含的布尔值<br>split()把字符串按照指定的分割符，拆分成数组中的每一项<br>match()返回正则表达式匹配后分割的数组 search()返回第一个匹配项第一个字符索引 replace(a,b) 把字符串中的a替换成b返回</p>
 </li>
@@ -500,6 +501,10 @@
 <li>箭头函数<br>去掉function，直接(参数)=&gt;{}<br>不能用作方法<br>function定义的函数this随上下文变化而变化<br>箭头函数this始终指向定义函数的环境</li>
 <li>promise<br>Promise 构造函数是 JavaScript 中用于创建 Promise 对象的内置构造函数，接受一个函数作为参数，该函数是同步的并且会被立即执行，所以我们称之为起始函数。起始函数包含两个参数 resolve 和 reject，起始函数执行成功时，它应该调用 resolve 函数并传递成功的结果。当起始函数执行失败时，它应该调用 reject 函数并传递失败的原因。<br>then：用于处理 Promise 成功状态的回调函数。<br>catch：用于处理 Promise 失败状态的回调函数。<br>finally：无论 Promise 是成功还是失败，都会执行的回调函数。</li>
 <li>for in和 for of<br>数组遍历用for of，对象遍历用for in<br>for…in 语句以任意顺序迭代对象的可枚举属性。<br>for…of 语句遍历可迭代对象定义要迭代的数据。<br>可以for([key,value] of map)</li>
+<li><p>map类型</p>
+</li>
+<li><p>set类型</p>
+</li>
 </ol>
 <h2 id="运行时-runtime"><a href="#运行时-runtime" class="headerlink" title="运行时 runtime"></a>运行时 runtime</h2><p>JavaScript是一门解释执行语言。这意味着源代码在执行前，无需编译为二进制文件。JavaScript引擎以一段程序的形式存在，负责将源代码翻译为机器码，并通过 CPU来执行翻译后的机器码</p>
 <p>对比Java是先编译后执行的，能够将代码语法错误立即反馈给你。在JavaScript 中，只有当引擎尝试执行到有问题的那行代码时，才知道哪里出了问题。</p>
@@ -843,7 +848,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">54.1k</span>
+                    <span class="item-value border-box word">56.8k</span>
                 </span>
             
 
