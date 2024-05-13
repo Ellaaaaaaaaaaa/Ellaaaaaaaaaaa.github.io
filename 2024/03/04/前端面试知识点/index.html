@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Mar 08 2024 16:16:51 GMT+0800">2024-03-08 16:16:51</span>
+                <span class="datetime" data-updated="Mon May 13 2024 15:57:11 GMT+0800">2024-05-13 15:57:11</span>
             </span>
         
 
@@ -304,12 +304,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.3k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.4k 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>9 分钟</span>
             </span>
         
         
@@ -328,7 +328,18 @@
 
                     <p>记录了我自己准备前端面试时复习的内容<br><span id="more"></span></p>
 <p>参考了 <a class="link"   target="_blank" rel="noopener" href="https://vue3js.cn/interview/" >https://vue3js.cn/interview/<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML CSS"></a>HTML CSS</h2><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ol>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>目前用过sass(scss)和less<br>记录一些特殊点和用法</p>
+<ol>
+<li>&amp;<br>表示嵌套的上一级，表示当前的选择对象</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.el-row &#123;</span><br><span class="line">    margin-bottom: 20px;</span><br><span class="line">    &amp;:last-child &#123;</span><br><span class="line">        margin-bottom: 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.el-row &#123;</span><br><span class="line">  margin-bottom: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.el-row:last-child &#123;</span><br><span class="line">  margin-bottom: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>吸附导航</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//html</span><br><span class="line">&lt;div class=&quot;app-header-sticky&quot; :class=&quot;&#123; show: y &gt; 78 &#125;&quot;&gt;&lt;/div&gt;</span><br><span class="line">//js/vue</span><br><span class="line">import &#123; useScroll &#125; from &#x27;@vueuse/core&#x27;</span><br><span class="line">const &#123; y &#125; = useScroll(window)</span><br><span class="line">//scss</span><br><span class="line">.app-header-sticky &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  // 此处为关键样式!!!</span><br><span class="line">  // 状态一：往上平移自身高度 + 完全透明</span><br><span class="line">  transform: translateY(-100%);</span><br><span class="line">  opacity: 0;</span><br><span class="line"></span><br><span class="line">  // 状态二：移除平移 + 完全不透明</span><br><span class="line">  &amp;.show &#123;</span><br><span class="line">    transition: all 0.3s linear;</span><br><span class="line">    transform: none;</span><br><span class="line">    opacity: 1;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ol>
 <li>回调函数<br>嵌套 函数体在完成某种操作后由内向外调用某个外部函数<br>函数作为参数传递给另外一个函数<br>回调地狱<br>回调函数是一个this对象的方法时，必须保证this对象的上下文，Call和Apply函数来保存this</li>
 </ol>
 <h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><ol>
@@ -684,7 +695,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-CSS"><span class="nav-text">HTML CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js"><span class="nav-text">Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text">express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js"><span class="nav-text">Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text">express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol>
     </div>
 </div>
 
@@ -723,7 +734,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">56.8k</span>
+                    <span class="item-value border-box word">57.9k</span>
                 </span>
             
 
@@ -870,7 +881,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-CSS"><span class="nav-text">HTML CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js"><span class="nav-text">Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text">express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript"><span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js"><span class="nav-text">Vue.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="nav-text">网络协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echarts%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-text">echarts可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#express"><span class="nav-text">express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol>
     </div>
 </div>
 
