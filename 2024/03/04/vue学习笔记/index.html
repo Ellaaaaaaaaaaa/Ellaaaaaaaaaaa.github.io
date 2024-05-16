@@ -272,7 +272,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon May 13 2024 01:27:33 GMT+0800">2024-05-13 01:27:33</span>
+                <span class="datetime" data-updated="Wed May 15 2024 14:28:42 GMT+0800">2024-05-15 14:28:42</span>
             </span>
         
 
@@ -310,12 +310,12 @@
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.7k 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>3.8k 字</span>
             </span>
         
         
             <span class="meta-info-item post-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>17 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>18 分钟</span>
             </span>
         
         
@@ -528,7 +528,11 @@
 <li>生命周期<br>不要用箭头函数，否则无法用this访问组件实例</li>
 <li>watch侦听器</li>
 <li>路由<br>动态路由匹配 :传递<br>routes:{}里面的的路由地址可以有相对路径，可以嵌套子路径<br>\<router-link to="">&lt;/router-link>里面必须是绝对路径<br>$router.push(“”)JS实现页面跳转 ?传递<br>使用命名路由跳转的时候注意要用v-bind:to=”{name:’’,params:{}}”</li>
-<li><p>组件<br>注意data是一个函数要返回return，组件之间不共 享</p>
+</ol>
+<p>用useRoute()可以获取当前路由下的数据</p>
+<p>路由缓存问题<br>路由只有参数变化的时候会组件实例复用，会导致数据无法更新<br>解决思路：让组件不复用强行销毁重建或者监听路由的变化<br>1)给router-view添加key<br>以当前路由的完整路径为key，但是有一些不用重新发<br>2)使用beforeRouteUpdate<br>可以获取最新的路由参数，性能有提升，精细化控制</p>
+<ol>
+<li><p>组件<br>注意data是一个函数要返回return，组件之间不共享</p>
 </li>
 <li><script setup>
 
@@ -844,7 +848,7 @@
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">57.9k</span>
+                    <span class="item-value border-box word">58.2k</span>
                 </span>
             
 
