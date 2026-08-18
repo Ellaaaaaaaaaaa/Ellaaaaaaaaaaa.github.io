@@ -40,7 +40,8 @@
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
-<meta name="generator" content="Hexo 7.1.1"><style>mjx-container[jax="SVG"] {
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Ella's Blog" type="application/atom+xml">
+<style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -152,8 +153,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style><link rel="alternate" href="/atom.xml" title="Ella's Blog" type="application/atom+xml">
-</head>
+</style></head>
 
 
 <body>
@@ -391,7 +391,7 @@ mjx-container[display="true"] + br {
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Sep 17 2025 23:58:41 GMT+0800">2025-09-17 23:58:41</span>
+                <span class="datetime" data-updated="Mon Sep 29 2025 00:13:28 GMT+0800">2025-09-29 00:13:28</span>
             </span>
         
 
@@ -426,7 +426,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>500 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>693 字</span>
             </span>
         
         
@@ -457,7 +457,14 @@ mjx-container[display="true"] + br {
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> {</span><br><span class="line">    <span class="keyword">return</span> b == <span class="number">0</span> ? a : gcd(b, a % b);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p>针对大整数，更相减损术,gcd(a,b)=gcd(a-b,b)<br>最小公倍数（Least Common Multiple, LCM）同理<br>axb=gcd(a,b)xlcm(a,b)  </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> {</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">replaceNonCoprimes</span><span class="params">(<span class="type">int</span>[] nums)</span> {</span><br><span class="line">        List&lt;Integer&gt; ans=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> x:nums){</span><br><span class="line">            <span class="keyword">while</span>(!ans.isEmpty()&amp;&amp;gcd(x,ans.get(ans.size()-<span class="number">1</span>))&gt;<span class="number">1</span>){</span><br><span class="line">                x=x/gcd(x,ans.get(ans.size()-<span class="number">1</span>))*ans.get(ans.size()-<span class="number">1</span>);</span><br><span class="line">                ans.remove(ans.size()-<span class="number">1</span>);</span><br><span class="line">            }</span><br><span class="line">            ans.add(x);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>{</span><br><span class="line">        <span class="keyword">return</span> b==<span class="number">0</span>?a:gcd(b,a%b);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<h2 id="2025-9-17打卡"><a href="#2025-9-17打卡" class="headerlink" title="2025.9.17打卡"></a>2025.9.17打卡</h2>
+<h2 id="2025-9-17打卡"><a href="#2025-9-17打卡" class="headerlink" title="2025.9.17打卡"></a>2025.9.17打卡</h2><h2 id="2025-9-18打卡"><a href="#2025-9-18打卡" class="headerlink" title="2025.9.18打卡"></a>2025.9.18打卡</h2><h2 id="2025-9-19打卡"><a href="#2025-9-19打卡" class="headerlink" title="2025.9.19打卡"></a>2025.9.19打卡</h2><h2 id="2025-9-20打卡"><a href="#2025-9-20打卡" class="headerlink" title="2025.9.20打卡"></a>2025.9.20打卡</h2><h2 id="2025-9-25-9-28打卡"><a href="#2025-9-25-9-28打卡" class="headerlink" title="2025.9.25-9.28打卡"></a>2025.9.25-9.28打卡</h2><p>三角形专场  </p>
+<ol>
+<li>三角形最小路径和<br>给定一个三角形 triangle ，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。相邻的结点 在这里指的是 下标 与 上一层结点下标 相同或者等于 上一层结点下标 + 1 的两个结点。也就是说，如果正位于当前行的下标 i ，那么下一步可以移动到下一行的下标 i 或 i + 1 。</li>
+</ol>
+<hr>
+<p><strong>解析：</strong><br>三角形应该是左对齐的数组，本质上是dp问题<br>2<br>3 4<br>6 5 7<br>4 1 8 3<br>​<br>状态方程dfs(i,j)=min(dfs(i+1,j),dfs(i+1,j+1))+triangle[i][j]</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
                 </div>
                 
                         
@@ -576,6 +583,22 @@ mjx-container[display="true"] + br {
                 
                     <div class="post-nav border-box">
                         
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/08/18/%E5%A5%A5%E5%BE%B7%E8%B5%9B/"
+                                   title="奥德赛"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">奥德赛</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
                         
                             <div class="next-post">
                                 <a class="next"
@@ -684,7 +707,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-15%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.15打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-16%E6%89%93%E5%8D%A1-%E6%9B%BF%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%9D%9E%E4%BA%92%E8%B4%A8%E6%95%B0"><span class="nav-text">2025.9.16打卡 替换数组中的非互质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-17%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.17打卡</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-15%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.15打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-16%E6%89%93%E5%8D%A1-%E6%9B%BF%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%9D%9E%E4%BA%92%E8%B4%A8%E6%95%B0"><span class="nav-text">2025.9.16打卡 替换数组中的非互质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-17%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.17打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-18%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.18打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-19%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.19打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-20%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.20打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-25-9-28%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.25-9.28打卡</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -704,7 +727,7 @@ mjx-container[display="true"] + br {
     <div class="border-box website-info-box default">
         
             <div class="copyright-info info-item default">
-                &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2025
+                &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2026
                 
                     &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">文景色 | Ella</a>
                 
@@ -723,7 +746,7 @@ mjx-container[display="true"] + br {
             
                 <span class="count-box border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">50.2k</span>
+                    <span class="item-value border-box word">51.9k</span>
                 </span>
             
 
@@ -870,7 +893,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-15%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.15打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-16%E6%89%93%E5%8D%A1-%E6%9B%BF%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%9D%9E%E4%BA%92%E8%B4%A8%E6%95%B0"><span class="nav-text">2025.9.16打卡 替换数组中的非互质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-17%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.17打卡</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-15%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.15打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-16%E6%89%93%E5%8D%A1-%E6%9B%BF%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%9D%9E%E4%BA%92%E8%B4%A8%E6%95%B0"><span class="nav-text">2025.9.16打卡 替换数组中的非互质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-17%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.17打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-18%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.18打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-19%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.19打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-20%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.20打卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-9-25-9-28%E6%89%93%E5%8D%A1"><span class="nav-text">2025.9.25-9.28打卡</span></a></li></ol></li></ol>
     </div>
 </div>
 
